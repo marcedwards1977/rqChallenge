@@ -3,6 +3,7 @@ package com.example.rqchallenge.employees.controller;
 import com.example.rqchallenge.employees.IEmployeeController;
 import com.example.rqchallenge.employees.model.Employee;
 import com.example.rqchallenge.employees.service.EmployeeService;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,7 +48,9 @@ public class EmployeeController implements IEmployeeController {
     }
 
     @Override
-    public ResponseEntity<Employee> createEmployee(Map<String, Object> employeeInput) {
+    public ResponseEntity<Employee> createEmployee(
+            @Schema(example = "{\n \"name\" : \"John Smith\",\n \"salary\" : \"400\",\n \"age\" : \"25\"\n }")
+            Map<String, Object> employeeInput) {
         return ResponseEntity.of(Optional.of(employeeService.createEmployee(employeeInput)));
     }
 

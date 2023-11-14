@@ -19,6 +19,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.projectlombok:lombok'
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+    implementation 'io.swagger:swagger-core:1.6.12'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'com.github.tomakehurst:wiremock-jre8-standalone:3.0.1'

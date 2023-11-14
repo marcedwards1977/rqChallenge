@@ -1,5 +1,7 @@
 # Coding Challenge
 
+<mark>Note For Assessor:</mark> when starting the application, swagger is available at http://localhost:8080/api/swagger-ui.html
+
 ### In this assessment you will be tasked with filling out the functionality of different methods that will be listed further down.
 These methods will require some level of api interactions with the following base url: https://dummy.restapiexample.com.
 Please keep the following in mind when doing this assessment: clean coding practices, test driven development, logging, and scalability.
