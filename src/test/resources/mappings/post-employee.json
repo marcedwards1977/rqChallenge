@@ -1,0 +1,22 @@
+{
+  "request": {
+    "urlPath": "/api/v1/create",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "status": "success",
+      "data": {
+        "name": "marc",
+        "salary": "10",
+        "age": "1",
+        "id": 2728
+      },
+      "message": "Successfully! Record has been added."
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

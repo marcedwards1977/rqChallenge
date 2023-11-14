@@ -1,0 +1,17 @@
+{
+  "request": {
+    "urlPath": "/api/v1/delete/6",
+    "method": "DELETE"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "status": "success",
+      "data": "6",
+      "message": "Successfully! Record has been deleted"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
