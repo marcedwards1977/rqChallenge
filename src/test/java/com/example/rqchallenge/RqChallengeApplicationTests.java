@@ -70,16 +70,16 @@ class RqChallengeApplicationTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(10)))
                 .andExpect(jsonPath("$[*]", containsInAnyOrder(
-                        "Doris Wilder",
-                        "Ashton Cox",
-                        "Jena Gaines",
-                        "Sonya Frost",
-                        "Caesar Vance",
-                        "Bradley Greer",
-                        "Herrod Chandler",
-                        "Airi Satou",
-                        "Garrett Winters",
-                        "Michael Silva")));
+                        "Paul Byrd",
+                        "Yuri Berry",
+                        "Charde Marshall",
+                        "Cedric Kelly",
+                        "Tatyana Fitzpatrick",
+                        "Brielle Williamson",
+                        "Jenette Caldwell",
+                        "Quinn Flynn",
+                        "Rhona Davidson",
+                        "Tiger Nixon")));
     }
 
     @Test

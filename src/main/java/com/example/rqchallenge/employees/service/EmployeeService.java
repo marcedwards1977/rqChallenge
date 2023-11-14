@@ -5,9 +5,11 @@ import com.example.rqchallenge.employees.repo.EmployeeAPI;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.toList;
 
@@ -53,9 +55,8 @@ public class EmployeeService {
 
     public List<String> getTopTenHighestEarningEmployeeNames() {
         log.info("getTopTenHighestEarningEmployeeNames()");
-        return getAllEmployees()
-                .stream()
-                .sorted(comparingInt(Employee::getSalary))
+        return getAllEmployees().stream()
+                .sorted(comparing(Employee::getSalary, Comparator.reverseOrder()))
                 .limit(10)
                 .map(Employee::getName)
                 .collect(toList());
@@ -63,7 +64,8 @@ public class EmployeeService {
 
     public List<Employee> getEmployeesByNameSearch(String searchString) {
         log.info("getEmployeesByNameSearch( {} )", searchString);
-        return getAllEmployees().stream()
+        return getAllEmployees()
+                .stream()
                 .filter(e -> e.getName().toLowerCase().contains(searchString.toLowerCase()))
                 .collect(toList());
     }
